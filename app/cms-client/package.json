@@ -1,0 +1,69 @@
+{
+  "name": "silverstripe-app",
+  "description": "Describe your project",
+  "main": "src/boot/index.js",
+  "author": "You",
+  "engines": {
+    "node": ">=10.x"
+  },
+  "scripts": {
+    "build": "yarn && yarn lint && NODE_ENV=production webpack -p --bail --progress",
+    "dev": "NODE_ENV=development webpack --progress",
+    "watch": "NODE_ENV=development webpack --watch --progress",
+    "css": "WEBPACK_CHILD=css npm run build",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "lock": "npm-shrinkwrap --dev",
+    "lint": "eslint src && sass-lint --verbose src/**/*.scss",
+    "lint-js": "eslint src",
+    "lint-js-fix": "eslint src --fix",
+    "lint-sass": "sass-lint src"
+  },
+  "dependencies": {
+    "babel-polyfill": "6.7.4",
+    "react": "^16.8.3"
+  },
+  "devDependencies": {
+    "@silverstripe/eslint-config": "^0.0.5",
+    "@silverstripe/webpack-config": "^1.7.0",
+    "babel-jest": "^23.6.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.10.0",
+    "jest-cli": "^23.6.0"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ],
+    "plugins": [
+      "transform-object-rest-spread"
+    ]
+  },
+  "jest": {
+    "roots": [
+      "app/client/src"
+    ],
+    "modulePaths": [
+      "src",
+      "../../vendor/silverstripe/admin/client/src",
+      "../../vendor/silverstripe/admin/node_modules"
+    ],
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/boot/**",
+      "!**/bundles/**",
+      "!**/legacy/**",
+      "!**/vendor/**",
+      "!**/*-test.{js,jsx}",
+      "!**/*-story.{js,jsx}"
+    ],
+    "testMatch": [
+      "**/tests/**/*-test.js?(x)"
+    ],
+    "transform": {
+      ".*": "babel-jest"
+    }
+  }
+}

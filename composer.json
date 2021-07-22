@@ -12,5 +12,11 @@
             "email": "maxime@silverstripe.com"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "extra": {
+        "project-files": [
+            "app/cms-client/*",
+            "app/_config/recipe-react.yml"
+        ]
+    }
 }
