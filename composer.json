@@ -1,0 +1,16 @@
+{
+    "name": "maxime-rainville/recipe-react",
+    "description": "Quickly set up your Silverstripe CMS project for React development",
+    "type": "silverstripe-recipe",
+    "require": {
+        "maxime-rainville/silverstripe-react": "dev-master"
+    },
+    "license": "BSD",
+    "authors": [
+        {
+            "name": "Maxime Rainville",
+            "email": "maxime@silverstripe.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
