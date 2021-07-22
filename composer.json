@@ -3,7 +3,8 @@
     "description": "Quickly set up your Silverstripe CMS project for React development",
     "type": "silverstripe-recipe",
     "require": {
-        "maxime-rainville/silverstripe-react": "dev-master"
+        "maxime-rainville/silverstripe-react": "*",
+        "maxime-rainville/from-source": "*"
     },
     "license": "BSD-3-Clause",
     "authors": [
