@@ -203,3 +203,11 @@ $fields->addFieldToTab(
 ```
 
 Simply rebuild your project with `vendor/bin/sake dev/build` and access your CMS form to view the result.
+
+## Next steps
+
+Here's some next step you might want to consider.
+
+- [Building a CMS area entirely in react](docs/en/Building-react-cms-area.md)
+
+
